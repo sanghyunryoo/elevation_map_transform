@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>elevation_map_transform</name>
+  <version>0.0.1</version>
+  <description>Elevation Map Transformer</description>
+  <maintainer email="sanghyunryoo@postech.ac.kr">root</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- ROS 2 기본 종속성 -->
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf2_geometry_msgs</depend>
+
+  <!-- grid_map 관련 종속성 -->
+  <depend>grid_map_ros</depend>
+  <depend>grid_map_msgs</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+    <launch>
+      <launch_file>transform.launch.py</launch_file>
+    </launch>    
+  </export>
+</package>
