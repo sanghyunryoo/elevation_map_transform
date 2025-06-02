@@ -15,10 +15,11 @@ find_package(tf2_geometry_msgs REQUIRED)
 find_package(grid_map_ros REQUIRED)
 find_package(grid_map_msgs REQUIRED)
 find_package(PCL REQUIRED)
+find_package(height_map_msgs REQUIRED)
 
 add_executable(elevation_map_transform_node src/elevation_map_transform_node.cpp)
 ament_target_dependencies(elevation_map_transform_node 
-  rclcpp std_msgs tf2_ros tf2_geometry_msgs grid_map_ros grid_map_msgs PCL
+  rclcpp std_msgs tf2_ros tf2_geometry_msgs grid_map_ros grid_map_msgs PCL height_map_msgs
 )
 
 install(TARGETS
